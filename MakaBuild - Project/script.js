@@ -1,7 +1,7 @@
 // aos animation
 AOS.init();
 
-// navbar animation
+// navbar animation - stays on the top while scrolling
 let header = document.querySelector('.header');
 let carousel = document.querySelector('.carousel');
 let breadCrumb = document.querySelector('.breadcrumb-area');
@@ -15,7 +15,7 @@ window.onscroll = () => {
         if (carousel !== null) {
             carousel.style.marginTop = header.offsetHeight + 'px';
         } else if (breadCrumb !== null) {
-            breadCrumb.style.marginTop = header.offsetHeight + 'px';
+            breadCrumb.style.marginTop = header.offsetHeight +'px';
         }
     } else {
         header.classList.remove('active');
@@ -28,7 +28,7 @@ window.onscroll = () => {
     }
 }
 
-// selecting filter menu and filter items
+// selecting filter menu and filter items - click to see more at HOME
 let filterMenu = document.querySelectorAll('.filter-menu li');
 let filterContents = document.querySelectorAll('.filter-content');
 
@@ -39,7 +39,7 @@ for (let i = 0; i < filterContents.length; i++) {
     }
 }
 
-// filter construction and interior projects
+// filter construction and interior projects- switch from Interior photos to Construction at Home 
 for (let i = 0; i < filterMenu.length; i++) {
     filterMenu[i].addEventListener('click', () => {
         // delete active menu
@@ -65,7 +65,8 @@ for (let i = 0; i < filterMenu.length; i++) {
     });
 }
 
-// selecting lightbox elements
+// selecting lightbox elements - after redirects to project, after "clik to see more."
+// shows photos in gallery mode with left and right arrow 
 let lightBox = document.querySelector('.lightbox');
 let closeBtn = document.querySelector('.lightbox-close-btn');
 let lightBoxImage = document.querySelector('.image-wrapper img');
@@ -125,7 +126,9 @@ for (let i = 0; i < filterContents.length; i++) {
             slideImage(slideIndex);
         }
 
-        // slide when arrow key down
+        // slide when arrow key left or right
+        //arrow left	37
+        //arrow up	38
         document.onkeydown = (event) => {
             // slide left
             if (event.keyCode === 37) {
@@ -160,12 +163,4 @@ for (let i = 0; i < filterContents.length; i++) {
     });
 }
 
-// service gallery
-let galleryContent = document.querySelectorAll('.service-gallery-content');
 
-for (let i = 0; i < galleryContent.length; i++) {
-    // when onclick then go to project page
-    galleryContent[i].onclick = () => {
-        window.location = 'project.html';
-    }
-}

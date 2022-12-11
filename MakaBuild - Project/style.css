@@ -67,7 +67,7 @@ a:hover {
 a:active {
     background: transparent !important;
 }
-
+/* titles of ourservices, interior services and consturction*/
 .section-title h1 {
     font-weight: 600;
     text-align: center;
@@ -94,7 +94,7 @@ a:active {
 
 
 
-/* Topbar 
+/* Topbar style 
 ------------- */
 .topbar {
     padding: 0.5rem 6rem;
@@ -118,7 +118,7 @@ a:active {
 
 
 
-/* Header
+/* Topbar is moving when scrolling down
 ------------- */
 .header {
     position: relative;
@@ -130,6 +130,7 @@ a:active {
     width: 100%;
     top: 0;
     left: 0;
+    
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
@@ -137,33 +138,9 @@ a:active {
     animation: animate 0.4s ease forwards;
 }
 
-@-webkit-keyframes animate {
-    from {
-        -webkit-transform: translateY(-10rem);
-        transform: translateY(-10rem);
-    }
 
-    to {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
-@keyframes animate {
-    from {
-        -webkit-transform: translateY(-10rem);
-        transform: translateY(-10rem);
-    }
-
-    to {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
-
-
-/* navbar */
+/* navbar  Logo + Get a Quote and menu 
+The !important rule overrides the background-color*/
 .navbar {
     background: #fff !important;
     border-bottom: 1px solid #ddd;
@@ -172,17 +149,20 @@ a:active {
 
 .nav-content {
     position: relative;
+
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .navbar-brand {
     padding-left: 5rem;
+    
 }
 
 .navbar-brand img {
     height: 4rem;
     width: 10rem;
+    
 }
 
 .nav-item .nav-link.active {
@@ -190,6 +170,7 @@ a:active {
 }
 
 .navbar .nav-item:hover .nav-link {
+  
     color: var(--color-base) !important;
 }
 
@@ -197,6 +178,7 @@ a:active {
     position: absolute;
     top: 50%;
     left: 50%;
+   
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -204,6 +186,7 @@ a:active {
 
 .main-menu ul li {
     padding: 0 0.6rem;
+
 }
 
 .main-menu ul li a {
@@ -221,10 +204,14 @@ a:active {
     font-family: 'Berlin Sans FB';
 }
 
+
 .nav-content .quote-btn {
-    position: absolute;
-    top: 1rem;
-    right: 6rem;
+    position: static;
+    top: 20%;
+    left: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -241,7 +228,7 @@ a:active {
 
 
 
-/* Breadcrumb 
+/* Breadcrumb - Contact US with background and Home/Page
 ----------------- */
 .breadcrumb-area {
     background: -o-linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./img/breadcumb.jpg');
@@ -285,12 +272,13 @@ a:active {
 
 
 
-/* Hero Carousel
---------------------- */
+/* Hero Carousel - big photo at the beginning of home page with text and left, right arrows 
+The linear-gradient() CSS function creates an image consisting of a progressive transition 
+between two or more colors along a straight line */
 .carousel-item {
     position: relative;
-    height: 100vh;
-    min-height: 360px;
+    height: 65vh;
+    min-height: 250px;
     font-family: BerlinSansFBDemiBold;
 }
 
@@ -346,7 +334,7 @@ a:active {
 
 
 
-/* Services
+/* Services - Interior Desing and Architecture home page style
 --------------- */
 .card {
     position: relative;
@@ -371,7 +359,7 @@ a:active {
     pointer-events: none;
     z-index: 99;
 }
-
+/*object-fit covers all box with photo */
 .card img {
     height: 100%;
     width: 100%;
@@ -387,7 +375,7 @@ a:active {
     -ms-transform: scale(1.2);
     transform: scale(1.2);
 }
-
+/* The transform CSS property lets you rotate and scale */
 .card .card-text-content {
     position: absolute;
     top: 50%;
@@ -415,7 +403,7 @@ a:active {
 
 
 
-/* Service Row
+/* Construction and Interior home page
 ----------------------- */
 .service-row {
     position: relative;
@@ -521,7 +509,7 @@ a:active {
 
 
 
-/* Home Gallery 
+/* Home Gallery - Current Projects, Interior and Construction + Photos style
 ------------------- */
 .gallery {
     padding-bottom: 2rem;
@@ -546,11 +534,13 @@ a:active {
     -ms-flex-align: center;
     align-items: center;
 }
-
+/* box Interior i Construction */
 .wrapper .filter-menu {
+    /* deklaracja flex kontenera */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    /* Przeniesienie nie zmieszczających elementów w nowy rząd */
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     list-style: none;
@@ -574,7 +564,8 @@ a:active {
     color: #fff;
     background: var(--color-base);
 }
-
+/* The flex-wrap CSS property sets whether flex items are forced 
+onto one line or can wrap onto multiple lines.  */
 .gallery .filter-items {
     margin-top: 1.6rem;
     display: -webkit-box;
@@ -587,7 +578,7 @@ a:active {
     -ms-flex-align: center;
     align-items: center;
 }
-
+/* The flex-basis CSS property sets the initial main size of a flex item. */
 .filter-items .filter-content {
     position: relative;
     margin: 0.3rem;
@@ -606,7 +597,7 @@ a:active {
 }
 
 
-/* active or delete contents */
+/* active or delete contents  switch form Interior to Construction at Home page*/
 .filter-items .filter-content.deleteContents {
     display: none;
 }
@@ -616,29 +607,7 @@ a:active {
     animation: anim 0.3s ease-out forwards;
 }
 
-@-webkit-keyframes anim {
-    from {
-        -webkit-transform: scale(0.2);
-        transform: scale(0.2);
-    }
 
-    to {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
-@keyframes anim {
-    from {
-        -webkit-transform: scale(0.2);
-        transform: scale(0.2);
-    }
-
-    to {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-}
 
 .filter-items .filter-content img {
     width: 100%;
@@ -649,6 +618,8 @@ a:active {
     object-position: center;
     border-radius: 0.4rem;
 }
+
+/*Add shoadw to home bottom gallery*/
 
 .filter-items .filter-content::before {
     position: absolute;
@@ -668,6 +639,7 @@ a:active {
     transition: all 0.4s ease;
 }
 
+/*Add shoadw to home bottom gallery at "click to see more"*/
 .filter-items .filter-content::after {
     position: absolute;
     content: '';
@@ -682,6 +654,7 @@ a:active {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
+    /* CSS transitions allows you to change property values smoothly, over a given duration. */
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
@@ -695,7 +668,7 @@ a:active {
     -ms-transform: scale(0.9);
     transform: scale(0.9);
 }
-
+/* style of "cliks to see more." text*/
 .filter-items .filter-content .hover-text {
     position: absolute;
     top: 50%;
@@ -725,6 +698,7 @@ a:active {
     transform: translate(-50%, -50%) scale(1);
 }
 
+/*Photos description in botoom home gallery*/
 .filter-items .filter-content .project-title-area {
     padding: 0 2rem 0 2rem;
     position: absolute;
@@ -748,7 +722,7 @@ a:active {
 }
 
 
-/* lightbox */
+/* lightbox - Project Gallery animations at Our Services page */
 .lightbox {
     position: fixed;
     top: 50%;
@@ -763,6 +737,7 @@ a:active {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    /* The box-sizing CSS property sets how the total width and height of an element is calculated. */
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     z-index: 99999999 !important;
@@ -873,7 +848,7 @@ a:active {
 #close-lightbox:hover::after {
     background: var(--color-base);
 }
-
+/* images previev settings  */
 .image-wrapper {
     height: 90%;
     width: 100%;
@@ -905,7 +880,7 @@ a:active {
 
 
 
-/* About 
+/* About Us whole page style and colors 
 --------------- */
 .about {
     padding: 5rem 0 2rem 0;
@@ -916,6 +891,7 @@ a:active {
 
 .about-wrap {
     padding-bottom: 6rem;
+    /* puts photos and text in next line when width is enough small*/
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -950,6 +926,7 @@ a:active {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+    /* rounded shape of photo */
     border-radius: 0.2rem;
 }
 
@@ -991,7 +968,7 @@ a:active {
 
 
 
-/* Customer review
+/* Customer review - light boxes, photo and reviews style 
 ----------------------- */
 .customer-review {
     position: relative;
@@ -1032,7 +1009,8 @@ a:active {
     color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    /* display flex provide us change from two columns to two box rows */
+    display: flex; /* or inline-flex */
     width: 82%;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -1058,7 +1036,7 @@ a:active {
 
 
 
-/* Service Gallery 
+/*BEST INTERIOR DESIGNS and Construction Gallery - bottom of OurServices
 ------------------------ */
 .service-gallery {
     padding: 0;
@@ -1074,11 +1052,13 @@ a:active {
 
 .service-gallery-content {
     position: relative;
+    /* one photo per 400px*/
     height: 400px;
     -ms-flex-preferred-size: 400px;
     flex-basis: 400px;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
+    /* every photo have same size in row*/
     flex-grow: 1;
     overflow: hidden;
     cursor: pointer;
@@ -1086,7 +1066,7 @@ a:active {
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
-
+/* gallery shadow look before mouse pointing*/
 .service-gallery-content::before {
     position: absolute;
     content: '';
@@ -1100,6 +1080,7 @@ a:active {
     z-index: 999;
 }
 
+/* photo shadow look before mouse pointing*/
 .service-gallery-content::after {
     position: absolute;
     content: '';
@@ -1113,7 +1094,7 @@ a:active {
     transition: all 0.4s ease;
     z-index: 9999;
 }
-
+/* photo blur */
 .service-gallery-content:hover::after {
     background: rgba(0, 0, 0, 0.4);
     -webkit-backdrop-filter: blur(8px);
@@ -1169,6 +1150,7 @@ a:active {
     pointer-events: none;
 }
 
+
 .service-gallery-content:hover .preview-details p {
     opacity: 1;
     visibility: visible;
@@ -1218,6 +1200,7 @@ a:active {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    /* space between text */
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -1235,8 +1218,9 @@ a:active {
 
 
 
-/* Project Gallery
+/* Project Gallery - Arrow animation and style 
 ---------------------- */
+/* shadowbox configuration */
 .lightbox.project-lightbox {
     -webkit-transform: translate(-50%, -50%) scale(1);
     -ms-transform: translate(-50%, -50%) scale(1);
@@ -1333,7 +1317,7 @@ a:active {
 
 
 
-/* Contact
+/* Contact US - style and colors
 ----------------- */
 .contact {
     padding: 5rem 0;
@@ -1419,15 +1403,7 @@ a:active {
     box-shadow: 0.1rem 0.1rem 0.6rem #ddd;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
 
-input[type=number] {
-    -moz-appearance: textfield;
-}
 
 .contact-form .textarea-field {
     height: 220px;
@@ -1468,7 +1444,7 @@ input[type=number] {
 
 
 
-/* Footer 
+/* Footer - botoom info panel design and colors 
 --------------- */
 .footer {
     padding-top: 3rem;
